@@ -1,0 +1,18 @@
+# Virtual environments
+poseidon-env/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Data & Models (tracked by DVC)
+data/
+models/
+
+# DVC cache
+.dvc/cache/
+
+# Logs
+*.log
+*.db
