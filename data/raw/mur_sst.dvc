@@ -1,0 +1,6 @@
+outs:
+- md5: ee7917b4befae3a067085f24951a0a0f.dir
+  size: 771730283
+  nfiles: 1
+  hash: md5
+  path: mur_sst
