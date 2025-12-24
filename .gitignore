@@ -1,18 +1,47 @@
-# Virtual environments
+# ============================
+# Python / Virtual Environment
+# ============================
 poseidon-env/
 .venv/
-
-# Python cache
 __pycache__/
 *.pyc
 
-# Data & Models (tracked by DVC)
-data/
-models/
+# ============================
+# DVC: ignore data, allow metadata
+# ============================
 
-# DVC cache
-.dvc/cache/
+# Ignore all data
+data/**
 
-# Logs
-*.log
+# Re-allow directory traversal
+!data/
+!data/**/
+
+# Allow DVC metadata files
+!data/**/*.dvc
+
+# Ignore all model files
+models/**
+
+# Re-allow directory traversal
+!models/
+!models/**/
+
+# Allow DVC metadata files
+!models/**/*.dvc
+
+# ============================
+# Airflow
+# ============================
+airflow/
 *.db
+*.db-journal
+*.log
+
+# ============================
+# Editor / OS junk
+# ============================
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
