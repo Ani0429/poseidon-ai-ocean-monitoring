@@ -7,31 +7,44 @@ __pycache__/
 *.pyc
 
 # ============================
-# DVC: ignore data, allow metadata
+# MLflow (tracking data is local)
+# ============================
+mlruns/
+
+# ============================
+# Reports & monitoring outputs
+# ============================
+reports/
+
+# ============================
+# DVC: Ignore actual data, track metadata
 # ============================
 
-# Ignore all data
+# Ignore all data files
 data/**
 
-# Re-allow directory traversal
+# Re-allow directory structure
 !data/
 !data/**/
 
-# Allow DVC metadata files
+# Allow DVC pointer files
 !data/**/*.dvc
 
-# Ignore all model files
+# ============================
+# Models (handled via MLflow / DVC)
+# ============================
+
 models/**
 
-# Re-allow directory traversal
+# Re-allow directory structure
 !models/
 !models/**/
 
-# Allow DVC metadata files
+# Allow DVC pointer files
 !models/**/*.dvc
 
 # ============================
-# Airflow
+# Airflow / Orchestration
 # ============================
 airflow/
 *.db

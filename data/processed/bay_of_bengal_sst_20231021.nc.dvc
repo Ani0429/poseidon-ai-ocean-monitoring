@@ -1,0 +1,5 @@
+outs:
+- md5: 580cb57ff320295c648d9cb9af937ba9
+  size: 32055312
+  hash: md5
+  path: bay_of_bengal_sst_20231021.nc
