@@ -1,0 +1,23 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# System dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# 🔒 Pin ALL incompatible dependencies
+RUN pip install --no-cache-dir \
+    numpy==1.24.4 \
+    pydantic==1.10.2 \
+    evidently==0.4.15 \
+    pandas \
+    xarray \
+    netCDF4
+
+# Copy project files
+COPY . .
+
+# Run drift script
+CMD ["python", "src/monitoring/evidently_sst_drift.py"]

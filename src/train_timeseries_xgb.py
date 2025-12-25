@@ -5,12 +5,13 @@ Timeseries SST XGBoost (REFERENCE-COMPATIBLE VERSION)
 
 ✔ Works with only 2 NetCDF files
 ✔ Lag-based autoregressive model
-✔ Row-based split (as in your reference)
+✔ Row-based split (reference-style)
 ✔ No dask required
-✔ MLflow-safe
+✔ MLflow-safe (older MLflow compatible)
 """
 
 import glob
+import hashlib
 import numpy as np
 import pandas as pd
 import xarray as xr
@@ -41,10 +42,18 @@ def xr_to_table(da):
 
 
 def build_lags(df):
-    """Lag-1 SST feature (reference-style)"""
+    """Lag-1 SST feature"""
     df = df.sort_values(["lat", "lon", "time"])
     df["sst_lag1"] = df.groupby(["lat", "lon"])["sst"].shift(1)
     return df.dropna(subset=["sst_lag1"])
+
+
+def file_checksum(path):
+    """Compute checksum for reproducibility proof"""
+    h = hashlib.md5()
+    with open(path, "rb") as f:
+        h.update(f.read(1024 * 1024))
+    return h.hexdigest()
 
 
 # ---------------- MAIN ----------------
@@ -58,7 +67,7 @@ def main():
     for f in files:
         print("  -", f)
 
-    # Load without dask
+    # Load datasets WITHOUT dask
     datasets = [xr.open_dataset(f) for f in files]
     ds = xr.concat(datasets, dim="time")
 
@@ -82,8 +91,7 @@ def main():
     if table.empty:
         raise SystemExit("❌ No rows after lag creation")
 
-    # -------- REFERENCE-STYLE SPLIT --------
-    # (row-based, not time-based)
+    # -------- ROW-BASED SPLIT (REFERENCE STYLE) --------
     table = table.sample(frac=1, random_state=42).reset_index(drop=True)
 
     split_idx = int(0.8 * len(table))
@@ -107,11 +115,18 @@ def main():
         random_state=42
     )
 
-    with mlflow.start_run(run_name="timeseries-xgb-reference"):
+    with mlflow.start_run(run_name="timeseries-xgb-final"):
+
+        # 🔹 LOG DATASET INFO (MLflow-compatible)
+        mlflow.log_param("dataset_path", "data/processed/")
+        mlflow.log_param("files_used", ",".join(files))
         mlflow.log_param("features", "lat,lon,sst_lag1")
         mlflow.log_param("split", "row-based-80-20")
-        mlflow.log_param("files_used", ",".join(files))
 
+        for f in files:
+            mlflow.log_param(f"checksum_{f}", file_checksum(f))
+
+        # Train
         model.fit(X_train, y_train)
         preds = model.predict(X_test)
 
