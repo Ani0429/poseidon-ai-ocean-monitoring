@@ -1,0 +1,5 @@
+outs:
+- md5: 0550eda8ff222526b375dd4385f1f169
+  size: 2389763
+  hash: md5
+  path: ph_bob_202311_processed.nc

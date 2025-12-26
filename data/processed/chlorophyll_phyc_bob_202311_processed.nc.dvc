@@ -1,0 +1,5 @@
+outs:
+- md5: f0621b8ec65672f5b9431e9a2c560bea
+  size: 1599315
+  hash: md5
+  path: chlorophyll_phyc_bob_202311_processed.nc

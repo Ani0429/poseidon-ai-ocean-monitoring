@@ -1,0 +1,5 @@
+outs:
+- md5: d2f95f85246870e11bf86f70251bd7db
+  size: 1599373
+  hash: md5
+  path: oxygen_npp_bob_202311_processed.nc

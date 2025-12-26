@@ -1,0 +1,6 @@
+outs:
+- md5: a9fd4953aeb5c75e00eb2fed2c4b851f.dir
+  size: 92281901
+  nfiles: 36
+  hash: md5
+  path: satellite_images
