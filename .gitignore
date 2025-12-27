@@ -5,56 +5,33 @@ poseidon-env/
 .venv/
 __pycache__/
 *.pyc
+*.pyo
 
 # ============================
-# MLflow (tracking data is local)
+# MLflow (local experiments)
 # ============================
 mlruns/
+mlartifacts/
+mlflow.db
 
 # ============================
-# Reports & monitoring outputs
+# Data (raw & processed)
 # ============================
-reports/
-
-# ============================
-# DVC: Ignore actual data, track metadata
-# ============================
-
-# Ignore all data files
-data/**
-
-# Re-allow directory structure
-!data/
-!data/**/
-
-# Allow DVC pointer files
-!data/**/*.dvc
+data/
+*.nc
+*.csv
+*.png
 
 # ============================
-# Models (handled via MLflow / DVC)
-# ============================
-
-models/**
-
-# Re-allow directory structure
-!models/
-!models/**/
-
-# Allow DVC pointer files
-!models/**/*.dvc
-
-# ============================
-# Airflow / Orchestration
-# ============================
-airflow/
-*.db
-*.db-journal
-*.log
-
-# ============================
-# Editor / OS junk
+# OS / Editor junk
 # ============================
 .ipynb_checkpoints/
 .vscode/
 .idea/
 .DS_Store
+
+# ============================
+# Logs & temp files
+# ============================
+*.log
+*.tmp
