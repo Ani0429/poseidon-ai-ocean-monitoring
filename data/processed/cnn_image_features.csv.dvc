@@ -1,0 +1,5 @@
+outs:
+- md5: 31b635d3a9e9443e7ff9880cf6f153e6
+  size: 19124245
+  hash: md5
+  path: cnn_image_features.csv
