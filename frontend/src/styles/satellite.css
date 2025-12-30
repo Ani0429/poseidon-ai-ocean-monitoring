@@ -1,0 +1,92 @@
+.satellite-page {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+}
+
+.satellite-info {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 15px;
+  color: #d0e6f0;
+  line-height: 1.6;
+}
+
+.satellite-form {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.satellite-form label {
+  display: block;
+  text-align: left;
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.satellite-form input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+}
+
+.satellite-form button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  background: #1e90ff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.satellite-form button:hover {
+  background: #1873cc;
+}
+
+.error {
+  margin-top: 15px;
+  color: #ff6b6b;
+}
+
+.satellite-result {
+  margin: 40px auto 0;
+  padding: 30px;
+  border-radius: 18px;
+  max-width: 500px;
+}
+
+.satellite-result .value {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.risk-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.green {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.yellow {
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+}
+
+.red {
+  background: linear-gradient(135deg, #cb2d3e, #ef473a);
+}

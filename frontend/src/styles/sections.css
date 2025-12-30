@@ -1,0 +1,32 @@
+.page {
+  padding: 120px 60px;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #031926, #052f44);
+  color: #e6f6ff;
+}
+
+.health-card {
+  margin-top: 40px;
+  max-width: 500px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 30px rgba(0, 180, 255, 0.15);
+}
+
+.health-card h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.health-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.explanation {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #cfefff;
+}

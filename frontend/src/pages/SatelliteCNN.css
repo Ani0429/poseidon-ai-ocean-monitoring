@@ -1,0 +1,137 @@
+.satellite-page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  color: white;
+}
+
+.subtitle {
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+/* Upload Section */
+.upload-card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 16px 20px;
+  border-radius: 18px;
+  width: fit-content;
+  margin-bottom: 30px;
+}
+
+.upload-card button {
+  padding: 10px 26px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* RESULT LAYOUT */
+.result-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* Image */
+.image-box {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.image-box img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+}
+
+/* Grad-CAM Overlay */
+.heatmap-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 0, 0, 0.45),
+    rgba(255, 165, 0, 0.3),
+    transparent
+  );
+  mix-blend-mode: screen;
+}
+
+.heatmap-label {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 6px 12px;
+  border-radius: 14px;
+}
+
+/* Result Card */
+.result-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 26px;
+  border-radius: 22px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.result-card h3 {
+  margin-bottom: 12px;
+}
+
+/* Risk colors */
+.risk.high {
+  color: #ff4d4d;
+}
+.risk.medium {
+  color: #facc15;
+}
+.risk.low {
+  color: #4ade80;
+}
+
+/* Confidence Bar */
+.confidence-section {
+  margin: 16px 0;
+}
+
+.confidence-bar {
+  height: 10px;
+  background: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 6px 0;
+}
+
+.confidence-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #facc15, #ef4444);
+}
+
+/* Drift */
+.drift {
+  color: #38bdf8;
+  font-weight: 500;
+}
+
+.model-name {
+  margin-top: 10px;
+  opacity: 0.8;
+  font-size: 14px;
+}
+.explain-box {
+  margin-top: 18px;
+  background: rgba(255,255,255,0.08);
+  padding: 16px;
+  border-radius: 14px;
+}

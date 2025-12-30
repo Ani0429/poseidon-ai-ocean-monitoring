@@ -1,0 +1,93 @@
+/* ROOT */
+.home-root {
+  position: relative;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+/* VIDEO BACKGROUND */
+.video-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+}
+
+.video-layer video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DARK OVERLAY */
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(2, 13, 24, 0.4),
+    rgba(2, 13, 24, 0.85)
+  );
+}
+
+/* CONTENT */
+.content-layer {
+  position: relative;
+  z-index: 1;
+}
+
+/* HERO */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+  letter-spacing: 4px;
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.scroll-hint {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* INFO SECTIONS */
+.info-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 10%;
+}
+
+.info-section.left {
+  justify-content: flex-start;
+}
+
+.info-section.right {
+  justify-content: flex-end;
+}
+
+/* CONTENT BOX */
+.info-box {
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(14px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.info-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px

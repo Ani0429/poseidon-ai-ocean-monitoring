@@ -1,0 +1,126 @@
+/* ===== Ocean Health Page Background ===== */
+.health-page {
+  min-height: 100vh;
+  padding: 120px 20px 60px;
+  background: radial-gradient(
+    circle at top,
+    #0b2a3d 0%,
+    #061a2b 45%,
+    #030d17 100%
+  );
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== Page Heading ===== */
+.health-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.health-subtitle {
+  max-width: 700px;
+  text-align: center;
+  font-size: 1.05rem;
+  opacity: 0.85;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* ===== Card ===== */
+.health-card {
+  width: 100%;
+  max-width: 460px;
+  padding: 28px;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 35, 55, 0.95),
+    rgba(5, 15, 25, 0.95)
+  );
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+}
+
+/* ===== Inputs ===== */
+.health-card label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.health-card input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  border: none;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+/* ===== Button ===== */
+.health-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #1e90ff, #00bfff);
+  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.health-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(30, 144, 255, 0.35);
+}
+
+/* ===== Result Card ===== */
+.health-result {
+  margin-top: 28px;
+  width: 100%;
+  max-width: 460px;
+  padding: 26px;
+  border-radius: 18px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== Score Text ===== */
+.health-score {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+/* ===== Risk Badge ===== */
+.health-risk {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+/* ===== Risk Colors ===== */
+.health-good {
+  background: linear-gradient(135deg, #0f9b0f, #00c853);
+}
+
+.health-warning {
+  background: linear-gradient(135deg, #ff9800, #ffc107);
+}
+
+.health-critical {
+  background: linear-gradient(135deg, #d32f2f, #ff5252);
+}

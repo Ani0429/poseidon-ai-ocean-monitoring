@@ -1,11 +1,25 @@
 # ============================
-# Python / Virtual Environment
+# Python / Virtual Environments
 # ============================
 poseidon-env/
 .venv/
+venv/
 __pycache__/
 *.pyc
 *.pyo
+*.pyd
+
+# ============================
+# Node / Frontend
+# ============================
+node_modules/
+dist/
+build/
+
+# ============================
+# Jupyter / Notebooks
+# ============================
+.ipynb_checkpoints/
 
 # ============================
 # MLflow (local experiments)
@@ -21,17 +35,45 @@ data/
 *.nc
 *.csv
 *.png
+*.jpg
+*.jpeg
 
 # ============================
-# OS / Editor junk
+# Model files (local only)
 # ============================
-.ipynb_checkpoints/
-.vscode/
-.idea/
-.DS_Store
+models/
+*.h5
+*.keras
+*.pkl
+*.joblib
 
 # ============================
 # Logs & temp files
 # ============================
 *.log
 *.tmp
+
+# ============================
+# OS / Editor junk
+# ============================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ============================
+# Docker (local overrides)
+# ============================
+docker-compose.override.yml
+
+# ============================
+# Environment variables
+# ============================
+.env
+.env.*
+
+# ============================
+# Cache / Misc
+# ============================
+.cache/
+pytest_cache/

@@ -1,0 +1,10 @@
+poseidon-env/
+__pycache__/
+.git/
+.gitignore
+mlruns/
+mlartifacts/
+*.png
+*.nc
+*.csv
+*.dvc

@@ -1,0 +1,67 @@
+.hero {
+  height: 100vh;
+  background-image: url("/images/hero-underwater.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.hero-overlay {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    rgba(0, 20, 40, 0.55),
+    rgba(0, 20, 40, 0.75)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: 60px 80px;
+  border-radius: 20px;
+  text-align: center;
+  color: #ffffff;
+  max-width: 700px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.hero-card h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 14px;
+}
+
+.hero-sdg {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  background: #00b4ff;
+  color: #002233;
+  padding: 14px 32px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #0095d9;
+  transform: translateY(-2px);
+}

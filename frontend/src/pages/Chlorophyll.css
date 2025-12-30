@@ -1,0 +1,62 @@
+.chl-container {
+  padding: 40px;
+  color: white;
+}
+
+.chl-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.chl-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.chl-form button {
+  grid-column: span 3;
+  padding: 12px;
+  background: #2196f3;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.chl-result {
+  margin-top: 30px;
+  padding: 25px;
+  background: rgba(0,0,0,0.35);
+  border-radius: 18px;
+}
+
+.risk {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.low { background: #2e7d32; }
+.high { background: #c62828; }
+
+.confidence {
+  height: 18px;
+  background: #333;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.confidence-fill {
+  height: 100%;
+  background: linear-gradient(90deg,#4caf50,#f44336);
+  border-radius: 10px;
+  text-align: right;
+  padding-right: 8px;
+}
+.explain-box {
+  margin-top: 25px;
+  background: rgba(255,255,255,0.08);
+  padding: 18px;
+  border-radius: 14px;
+}

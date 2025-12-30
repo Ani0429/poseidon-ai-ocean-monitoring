@@ -1,0 +1,29 @@
+from backend.app.services.model_loader import models
+import numpy as np
+import tensorflow as tf
+from PIL import Image
+import io
+
+def predict_chlorophyll_cnn(file):
+    image = Image.open(io.BytesIO(file.file.read())).resize((224, 224))
+    image = np.array(image) / 255.0
+    image = np.expand_dims(image, axis=0)
+
+    model = models["chlorophyll_cnn"]
+    pred = model.predict(image)[0]
+
+    return {
+        "prediction": int(pred.argmax()),
+        "confidence": float(pred.max()),
+        "explanation": "Prediction based on spatial chlorophyll patterns from satellite imagery"
+    }
+
+def predict_chlorophyll_rf(features: dict):
+    model = models["chlorophyll_rf"]
+    X = np.array(list(features.values())).reshape(1, -1)
+    pred = model.predict(X)[0]
+
+    return {
+        "prediction": int(pred),
+        "explanation": "Prediction based on statistical chlorophyll feature patterns"
+    }
