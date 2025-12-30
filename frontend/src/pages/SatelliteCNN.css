@@ -32,7 +32,7 @@
   cursor: pointer;
 }
 
-/* RESULT LAYOUT */
+/* Layout */
 .result-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -89,18 +89,20 @@
   margin-bottom: 12px;
 }
 
-/* Risk colors */
+/* Risk Colors */
 .risk.high {
   color: #ff4d4d;
 }
+
 .risk.medium {
   color: #facc15;
 }
+
 .risk.low {
   color: #4ade80;
 }
 
-/* Confidence Bar */
+/* Confidence */
 .confidence-section {
   margin: 16px 0;
 }
@@ -128,10 +130,4 @@
   margin-top: 10px;
   opacity: 0.8;
   font-size: 14px;
-}
-.explain-box {
-  margin-top: 18px;
-  background: rgba(255,255,255,0.08);
-  padding: 16px;
-  border-radius: 14px;
 }
